@@ -1,0 +1,69 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: b695a33f7fc2c939059e9c6154b5c5f51f102b3028da03da96bc1a9e16bfe191
+
+name:           taylorConvexity
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/taylorConvexity#readme>
+homepage:       https://github.com/githubuser/taylorConvexity#readme
+bug-reports:    https://github.com/githubuser/taylorConvexity/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/taylorConvexity
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_taylorConvexity
+  hs-source-dirs:
+      src
+  build-depends:
+      ad
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+executable taylorConvexity-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_taylorConvexity
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      ad
+    , backprop
+    , base >=4.7 && <5
+    , bytestring
+    , cassava
+    , math-functions
+    , taylorConvexity
+  default-language: Haskell2010
+
+test-suite taylorConvexity-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_taylorConvexity
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      ad
+    , base >=4.7 && <5
+    , taylorConvexity
+  default-language: Haskell2010
